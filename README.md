@@ -109,11 +109,11 @@ jquery on document load:
 	
 	});
 		
-on call "enterin.init() set default slide to 0:
+on call <b>enterin.init()</b> set default slide to 0:
 
 	enterin.changeSlide(0);
 		
-when slide change, remove all .active classes from controller:
+when slide change, remove all <b>.active</b> classes from controller:
 
 	jQuery("[data-enterin]").removeClass("active");
 	jQuery("[data-enterin='"+to+"']").addClass("active");	
