@@ -25,6 +25,6 @@
     
 ### EnterIn Attributes:    
 
-#### EnterIn Controller:
+#### EnterIn controller example:
     
-    data-enterin="[index]"
+    <a data-enterin="[index]">Click me for slide 1</a>
