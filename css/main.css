@@ -93,7 +93,7 @@ body {
 	
 	margin: auto auto;
 	
-	transition: all 3.0s ease-in-out;
+	transition: all 3.0s ease-out;
 	
 	-webkit-transform: translate3d(0, 0, 0);
 	-moz-transform: translate3d(0, 0, 0);
