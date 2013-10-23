@@ -19,10 +19,6 @@
 
     <script src="js/main.js"></script>
     
-### Reset all elements for HTML 5 style:
-
-    <link rel="stylesheet" href="css/reset.css" />
-    
 ### Main Style:    
 
     <link rel="stylesheet" href="css/main.css" />
