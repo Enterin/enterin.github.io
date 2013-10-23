@@ -206,6 +206,7 @@ header {
 	top:0px;
 	padding:0% 1%;	
 	vertical-align:middle;
+	width:250px;
 }
 
 header h1 {
@@ -213,19 +214,22 @@ header h1 {
 	display:inline-block;
 }
 header h2 {
-	font-size:16px;
+	font-size:13px;
 	padding:0px;
 	margin:0px;	
+	text-align:center;
 }
 
 header .share-row {
 	vertical-align:middle;
 	margin-top:25px;
+	text-align:center;
+	padding-left:15px;
 }
 
 header .share {
 	display:inline-block;
-	width:110px;
+	width:96px;
 	overflow:hidden;
 	vertical-align:top;
 }
