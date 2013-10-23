@@ -81,11 +81,14 @@ body {
 
 
 .v-div {
+	
 	position:fixed;
+	
 	top:-100%;
 	left:-100%;
 	right:-100%;
 	bottom:-100%;
+	
 	margin: auto auto;
 	
 	transition: all 3.0s ease-in-out;
@@ -213,6 +216,18 @@ header h2 {
 	font-size:16px;
 	padding:0px;
 	margin:0px;	
+}
+
+header .share-row {
+	vertical-align:middle;
+	margin-top:25px;
+}
+
+header .share {
+	display:inline-block;
+	width:110px;
+	overflow:hidden;
+	vertical-align:top;
 }
 
 header a {
