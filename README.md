@@ -101,7 +101,7 @@ when data-enterin="2" was clicked and &lt;body&gt; have e2 class:
 
 #### javascript logic:
 
-jquery on document load:
+jQuery on document load:
 
 	jQuery(function() {
 	
@@ -109,16 +109,16 @@ jquery on document load:
 	
 	});
 		
-on call <b>enterin.init()</b> set default slide to 0:
+on call <b>enterin.init()</b> set default slide to <b>0</b>:
 
 	enterin.changeSlide(0);
 		
-when slide change, remove all <b>.active</b> classes from controller:
+when slide change, remove all <b>.active</b> classes from controllers:
 
 	jQuery("[data-enterin]").removeClass("active");
 	jQuery("[data-enterin='"+to+"']").addClass("active");	
 		
-when slide change, remove all e(n) class from &lt;body&gt; by .v-div count:
+when slide change, remove all <b>.e(n)</b> class from &lt;body&gt; by <b>.v-div count</b>:
 			
 	for(var i = 1; i <= (jQuery(".v-div").length); i++ ) {
 	
@@ -126,7 +126,7 @@ when slide change, remove all e(n) class from &lt;body&gt; by .v-div count:
 	
 	}
 
-when slide change, add some class to &lt;body&gt; at start point "2" to [data-enterin="(n)"]:
+when slide change, add some class to &lt;body&gt; at start point <b>2</b> to <b>[data-enterin="(n)"]</b>:
 		
 	for(var a = 2; a<=to; a++) {
 		
