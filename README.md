@@ -23,7 +23,7 @@
 
     <link rel="stylesheet" href="css/main.css" />
     
-### EnterIN Attributes:    
+### EnterIN logic:    
 
 #### EnterIN controller example:
     
@@ -59,33 +59,33 @@
 
 #### EnterIN <body> class change logic example:
 
-##### html logic:
+#### html logic:
 
-the controller click event add some classes with "e" prefix to <body> tag
+the controller click event add some classes with "e" prefix to &lt;body&gt; tag
 		
 example:
 		
-[data-enterin="2"] clicked:
+##### [data-enterin="2"] clicked:
 
 	body like this:
 		
 		<body class="e2">
 				
-[data-enterin="3"] clicked:
+##### [data-enterin="3"] clicked:
 
-	body like this:
+body like this:
 		
-		<body class="e2 e3">
+	<body class="e2 e3">
 		
-[data-enterin="4"] clicked:
+##### [data-enterin="4"] clicked:
 
-	body like this:
+body like this:
 		
-		<body class="e2 e3 e4">	
+	<body class="e2 e3 e4">	
 					
-##### css logic:
+#### css logic:
 		
-when data-enterin="2" was clicked and <body> have e2 class:
+when data-enterin="2" was clicked and &lt;body&gt; have e2 class:
 		
 	body.e2 #v1 {
 		width:250%;
@@ -99,7 +99,7 @@ when data-enterin="2" was clicked and <body> have e2 class:
 		z-index:1;	
 	}
 
-##### javascript logic:
+#### javascript logic:
 
 jquery on document load:
 
@@ -118,7 +118,7 @@ when slide change, remove all .active classes from controller:
 	jQuery("[data-enterin]").removeClass("active");
 	jQuery("[data-enterin='"+to+"']").addClass("active");	
 		
-when slide change, remove all e(n) class from <body> by .v-div count:
+when slide change, remove all e(n) class from &lt;body&gt; by .v-div count:
 			
 	for(var i = 1; i <= (jQuery(".v-div").length); i++ ) {
 	
@@ -126,7 +126,7 @@ when slide change, remove all e(n) class from <body> by .v-div count:
 	
 	}
 
-when slide change, add some class to <body> at start point "2" to [data-enterin="(n)"]:
+when slide change, add some class to &lt;body&gt; at start point "2" to [data-enterin="(n)"]:
 		
 	for(var a = 2; a<=to; a++) {
 		
