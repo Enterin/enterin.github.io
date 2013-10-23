@@ -61,7 +61,7 @@
 
 #### html logic:
 
-the controller click event add some classes with "e" prefix to &lt;body&gt; tag
+the controller click event add some classes with <b>e</b> prefix to &lt;body&gt; tag
 		
 example:
 		
@@ -85,7 +85,7 @@ body like this:
 					
 #### css logic:
 		
-when data-enterin="2" was clicked and &lt;body&gt; have e2 class:
+when <b>[data-enterin="2"]</b> was clicked and &lt;body&gt; have .e2 class:
 		
 	body.e2 #v1 {
 		width:250%;
@@ -126,7 +126,7 @@ when slide change, remove all <b>.e(n)</b> class from &lt;body&gt; by <b>.v-div 
 	
 	}
 
-when slide change, add some class to &lt;body&gt; at start point <b>2</b> to <b>[data-enterin="(n)"]</b>:
+when slide change, add some class to <b>&lt;body&gt;</b> at start point <b>2</b> to <b>[data-enterin="(n)"]</b>:
 		
 	for(var a = 2; a<=to; a++) {
 		
