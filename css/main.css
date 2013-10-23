@@ -158,20 +158,14 @@ body {
 
 body.e2 #v1 {
 	width:250%;
-}
-
-body.e2 #v1, body.e2 #v1 button {
 	opacity:0;
-	z-index:0;
+	z-index:0;	
 }
 		
 body.e2 #v2 {
 	width:100%;
-}
-
-body.e2 #v2, body.e2 #v2 button {
 	opacity:1;
-	z-index:1;
+	z-index:1;	
 }
 
 /*
@@ -181,20 +175,14 @@ body.e2 #v2, body.e2 #v2 button {
 
 body.e3 #v2 {
 	width:300%;
-}
-
-body.e3 #v2, body.e3 #v2 button {
 	opacity:0;
-	z-index:0;
+	z-index:0;	
 }
-		
+	
 body.e3 #v3 {
 	width:100%;
-}
-
-body.e3 #v3, body.e3 #v3 button {
 	opacity:1;
-	z-index:2;
+	z-index:2;	
 }
 
 #fork {
