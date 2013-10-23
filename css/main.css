@@ -83,6 +83,8 @@ body {
 .v-div {
 	
 	position:fixed;
+
+	width:100%;
 	
 	top:-100%;
 	left:-100%;
@@ -110,14 +112,14 @@ body {
  */
 
 #v1 {
-	background: url("../img/mac.jpg") no-repeat center center transparent;
-	background-size: 97%;			
+	background: url("../img/mac.png") no-repeat center center transparent;
+	background-size: 100%;			
 }
 
 #v2 {
 	background: url("../img/ipad.png") no-repeat center center transparent;
 	background-size: 110%;
-	margin-top:10%;
+	margin-top:2%;
 }
 
 #v3 {
@@ -131,18 +133,25 @@ body {
  */
 
 #v1 {
-	width:80%;
+	transform:scale(0.8);
+	-ms-transform:scale(0.8);
+	-webkit-transform:scale(0.8);
 	z-index: 2;
+	opacity:1
 }
 
 #v2 {
-	width:5%;
-	opacity:0;
+	transform: scale(0.5);
+	-ms-transform: scale(0.5);
+	-webkit-transform: scale(0.5);
+	opacity:0.5;
 }
 
 #v3 {
-	width:5%;
-	opacity:0;
+	transform: scale(0.1);
+	-ms-transform: scale(0.1);
+	-webkit-transform: scale(0.1);
+	opacity:0.3;
 }
 
 
@@ -159,16 +168,26 @@ body {
  */
 
 
-body.e2 #v1 {
-	width:250%;
-	opacity:0;
-	z-index:0;	
-}
-		
 body.e2 #v2 {
-	width:100%;
-	opacity:1;
-	z-index:1;	
+	transform:scale(1);
+	-ms-transform:scale(1);
+	-webkit-transform:scale(1);
+	z-index: 2;
+	opacity:1
+}
+
+body.e2 #v3 {
+	transform: scale(0.5);
+	-ms-transform: scale(0.5);
+	-webkit-transform: scale(0.5);
+	opacity:0.5;
+}
+
+body.e2 #v1 {
+	transform: scale(5);
+	-ms-transform: scale(5);
+	-webkit-transform: scale(5);
+	opacity:0.3;
 }
 
 /*
@@ -176,16 +195,26 @@ body.e2 #v2 {
  * 
  */
 
-body.e3 #v2 {
-	width:300%;
-	opacity:0;
-	z-index:0;	
-}
-	
 body.e3 #v3 {
-	width:100%;
-	opacity:1;
-	z-index:2;	
+	transform:scale(1);
+	-ms-transform:scale(1);
+	-webkit-transform:scale(1);
+	z-index: 2;
+	opacity:1
+}
+
+body.e3 #v1 {
+	transform: scale(10);
+	-ms-transform: scale(10);
+	-webkit-transform: scale(10);
+	opacity:0.5;
+}
+
+body.e3 #v2 {
+	transform: scale(5);
+	-ms-transform: scale(5);
+	-webkit-transform: scale(5);
+	opacity:0.3;
 }
 
 #fork {
