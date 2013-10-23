@@ -20,8 +20,6 @@
  * timeout for slides in milliseconds
  */
 
-var time = 1000;
-
 var enterin = {
 	
 	init: function() {
