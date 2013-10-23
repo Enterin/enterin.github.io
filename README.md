@@ -1,4 +1,4 @@
-# EnterIn
+# EnterIN
 
 > A CSS 3 and Javascript Effect inspired by [HTC ONE EXPLORE](http://one.htc.com/experienceit/index.html)
 
@@ -23,8 +23,8 @@
 
     <link rel="stylesheet" href="css/main.css" />
     
-### EnterIn Attributes:    
+### EnterIN Attributes:    
 
-#### EnterIn controller example:
+#### EnterIN controller example:
     
     <a data-enterin="[index]">Click me for slide 1</a>
