@@ -137,21 +137,18 @@ body {
 	-ms-transform:scale(0.8);
 	-webkit-transform:scale(0.8);
 	z-index: 2;
-	opacity:1
 }
 
 #v2 {
 	transform: scale(0.5);
 	-ms-transform: scale(0.5);
 	-webkit-transform: scale(0.5);
-	opacity:0.5;
 }
 
 #v3 {
 	transform: scale(0.1);
 	-ms-transform: scale(0.1);
 	-webkit-transform: scale(0.1);
-	opacity:0.3;
 }
 
 
@@ -173,21 +170,18 @@ body.e2 #v2 {
 	-ms-transform:scale(1);
 	-webkit-transform:scale(1);
 	z-index: 2;
-	opacity:1
 }
 
 body.e2 #v3 {
 	transform: scale(0.5);
 	-ms-transform: scale(0.5);
 	-webkit-transform: scale(0.5);
-	opacity:0.5;
 }
 
 body.e2 #v1 {
 	transform: scale(5);
 	-ms-transform: scale(5);
 	-webkit-transform: scale(5);
-	opacity:0.3;
 }
 
 /*
@@ -200,21 +194,18 @@ body.e3 #v3 {
 	-ms-transform:scale(1);
 	-webkit-transform:scale(1);
 	z-index: 2;
-	opacity:1
 }
 
 body.e3 #v1 {
 	transform: scale(10);
 	-ms-transform: scale(10);
 	-webkit-transform: scale(10);
-	opacity:0.5;
 }
 
 body.e3 #v2 {
 	transform: scale(5);
 	-ms-transform: scale(5);
 	-webkit-transform: scale(5);
-	opacity:0.3;
 }
 
 #fork {
