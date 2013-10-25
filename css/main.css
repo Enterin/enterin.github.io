@@ -137,21 +137,27 @@ header li a {
 
 #start {
 	margin:0px;
+	height:auto;
+	min-height:auto;
 }
 
 #start .container {
 	top:14%;
+
 }
 
 #start h3 {
 	margin-top:70px;
 }
 
-#fork {
-	z-index:99999;
-	position:fixed;
-	top:0px;
-	right:0px;
+#start .thats {
+	font-size:66px;
+	padding:5% 0%;
+}
+
+footer {
+	text-align:right;
+	padding:5% 2%;
 }
 
 #enterin-wrapper,
@@ -192,6 +198,7 @@ header li a {
 	width:100px;
 	text-transform:uppercase;
 }
+
 
 @media (min-width: 300px) and (max-width:700px) {
 	#home {
