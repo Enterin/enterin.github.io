@@ -16,67 +16,37 @@
  */
 
 
-/*
- * timeout for slides in milliseconds
- */
-
-var enterin = {
+var main = {
 	
-	init: function() {
+	init: function(){
 		
-		enterin.bindEnterButtons();
-		
-		enterin.changeSlide(0);
+		this.bindNav();
 		
 	},
 	
-	bindEnterButtons: function() {
+	bindNav: function(){
 		
-		jQuery("a[data-enterin]").click(function(){
+		jQuery("[data-topage]").click(function(){
 			
-			var $this  	= jQuery(this);
-			var $to	    = $this.data("enterin");
+			jQuery("[data-topage]").parent().removeClass("active")
 			
-			enterin.changeSlide($to);
+			var $this = jQuery(this);
+			var $page = $this.data("topage");
+			
+			var $top  = jQuery("#"+$page).position().top;
+			
+			jQuery("html, body").stop().animate({
+				scrollTop: $top
+			},"slow");
+			
+			$this.parent().addClass("active");
 			
 		});
-		
-	},
-	
-	changeSlide: function(to) {
-		
-		jQuery("[data-enterin]").removeClass("active");
-		jQuery("[data-enterin='"+to+"']").addClass("active");		
-			
-		for(var i = 1; i <= (jQuery(".v-div").length); i++ ) {
-			
-			jQuery("body").removeClass("e"+i);
-			
-		}
-		
-		if(to == 0) {
-			
-			return;
-			
-		}
-
-		
-		for(var a = 2; a<=to; a++) {
-			
-			jQuery("body").addClass("e"+a);
-			
-		}
 		
 	}
 	
 };
 
-
-jQuery(function() {
-	
-	enterin.init();
-	
+jQuery(function(){
+	main.init();
 });
-
-
-
