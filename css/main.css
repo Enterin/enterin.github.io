@@ -100,7 +100,7 @@ header li a {
 	color:white;
 }
 
-#home .container a{
+#home .container .btn{
 	margin-top:20px;
 	margin-right:20px;
 	vertical-align:middle;
