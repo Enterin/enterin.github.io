@@ -5,10 +5,9 @@ body, html {
 }
 
 #enterin-wrapper {
-	margin:0 auto;
-	width:800px;
-	height:400px;
-	min-height:70%;	
+	width: 767px;
+	height: 432px;
+	min-height: 400px;
 	border:2px solid #E9E9E9;
 	padding:20px;
 }
