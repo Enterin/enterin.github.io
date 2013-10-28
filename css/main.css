@@ -121,7 +121,7 @@ header li a {
 }
 
 #home .IN-widget {
-	vertical-align:top;
+	vertical-align:top!important;
 }
 
 #example {
