@@ -6,8 +6,8 @@ body, html {
 
 #enterin-wrapper {
 	margin:0 auto;
-	width:70%;
-	height:70%;
+	width:800px;
+	height:400px;
 	min-height:70%;	
 	border:2px solid #E9E9E9;
 	padding:20px;
