@@ -45,3 +45,7 @@ body, html {
 	color:#2980b9;
 	text-decoration:none;
 }
+
+#enterin-ctrl a:hover {
+	color:#E9E9E9;
+}
