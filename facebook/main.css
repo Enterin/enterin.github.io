@@ -9,6 +9,8 @@ body, html {
 	width:70%;
 	height:70%;
 	min-height:70%;	
+	border:2px solid #E9E9E9;
+	padding:20px;
 }
 
 #enterin-wrapper .enterin-slide {
