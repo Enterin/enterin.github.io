@@ -38,3 +38,10 @@ body, html {
 	z-index:888;
 	margin-bottom:20px;
 }
+
+#enterin-ctrl a{
+	display:inline-block;
+	margin-right:30px;
+	color:#2980b9;
+	text-decoration:none;
+}
