@@ -120,6 +120,10 @@ header li a {
 	margin-left:-15px;
 }
 
+#home .IN-widget {
+	vertical-align:top;
+}
+
 #example {
 	margin:0px;
 }
