@@ -4,6 +4,19 @@ body, html {
 	height:100%;
 }
 
+a {
+	color:#2980b9;
+	text-decoration:none;
+}
+
+#enterin-ctrl a:hover {
+	color:#E9E9E9;
+}
+
+footer {
+	margin-top:30px;
+}
+
 #enterin-wrapper {
 	width: 767px;
 	height: 432px;
@@ -43,8 +56,6 @@ body, html {
 #enterin-ctrl a{
 	display:inline-block;
 	margin-right:30px;
-	color:#2980b9;
-	text-decoration:none;
 }
 
 #enterin-ctrl a:hover {
