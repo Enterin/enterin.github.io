@@ -171,12 +171,17 @@ header li a {
 
 }
 
+#start h1 {
+	font-size:90px;
+}
+
 #start h3 {
 	margin-top:70px;
 }
 
 #start .slogan {
-	padding:10% 10%;
+	padding:5% 10%;
+	padding-bottom:0%;
 }
 
 #start h4 {
@@ -205,6 +210,11 @@ header li a {
 	margin:0px;
 	padding:0px;
 
+}
+
+pre {
+	border:1px solid #DDDDDD!important;
+	padding:20px!important;
 }
 
 footer {
