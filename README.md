@@ -1,5 +1,3 @@
-# EnterIN
-
 [![EnterIN](http://enterin.github.io/img/b-enterin.jpg)](http://enterin.github.io)
 
 ## See the official repository:
