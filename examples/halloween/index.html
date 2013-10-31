@@ -197,7 +197,7 @@
 		jQuery("#enterin-wrapper").enterin({
 		   controllers:	'#enterin-ctrl',
 		   maxScale: 150,
-		   effectTime: 2.0,
+		   effectTime: 5.0,
 		   ease: 'linear',
 		   endCallback:	function(current_index) {
 				if(current_index == "2") {
@@ -211,8 +211,8 @@
 			jQuery("a[data-enterin='2']").click();
 			setTimeout(function(){
 				jQuery("a[data-enterin='3']").click();
-				jQuery(".slide2").css("transform", "scale(10)");
-			},2000);
+				jQuery(".slide2").css("transform", "scale(13)");
+			},5000);
 		});
 		
 		jQuery("#enterin-wrapper, #enterin-ctrl").hide(0);
