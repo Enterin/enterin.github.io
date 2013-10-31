@@ -261,6 +261,12 @@ footer {
 	text-transform:uppercase;
 }
 
+
+.halloween a{
+	color:red!important;
+	
+}
+
 @media (min-width: 300px) and (max-width:700px) {
 	#home {
 		height:160%;
