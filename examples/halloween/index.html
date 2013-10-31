@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Happy Halloween By EnterIN | An Inception Effect plugin for jQuery!</title>
+        <meta name="description" content="© 2013 Gianfilippo Balestriero under Apache License, Version 2.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+		<meta property="og:title" content="EnterIN | An Inception Effect plugin for jQuery!" /> 
+		<meta property="og:image" content="http://enterin.github.io/img/enterin.png" /> 
+		<meta property="og:description" content="© 2013 Gianfilippo Balestriero under Apache License, Version 2.0" /> 
+		<meta property="og:url" content="http://enterin.github.io">        
+
+        <script src="../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+	<body>
+		
+		<style>
+		
+		html, body {
+			background:black;
+			color:white;
+			width:100%;
+			height:100%;
+			min-height:100%;
+			padding:0px;
+			margin:0px;
+			overflow:hidden;
+		}
+		
+		#enterin-wrapper {
+			width:100%;
+			height:130%;
+			min-height:130%;
+		}
+		
+		#enterin-wrapper .enterin-slide {
+			width:100%;
+			height:100%;
+			min-height:100%;
+			margin-top:-100px;
+		}
+		
+		.slide1 {
+			background: url('img/bat.png') center center no-repeat transparent;
+			background-size:100%;
+			z-index:1;
+		}
+		.slide2 {
+			background: url('img/pumpkin.png') center center no-repeat transparent;
+			background-size:100%;
+			z-index:2;
+		}
+		
+		.slide3 .text {
+			position:absolute; 
+			top:0px;
+			left:0px;
+			width:100%;
+			height:100%;
+			min-height:100%;
+			background: url('img/text.png') center center no-repeat transparent;
+			background-size:100%;
+			
+			opacity:1;
+		}
+		
+		#play {
+			display:block;
+			position:fixed;
+			bottom:70px;
+			right:0px;
+			left:0px;
+			margin: 0 auto;
+			z-index:100;
+			width:400px;
+			height:120px;
+			background: url('img/button.png') center center no-repeat transparent;	
+			transition:all 1.5s;
+			opacity:0.5;
+			text-indent:-999999px;
+		}
+		
+		#play:hover {
+			opacity: 1;
+		}
+
+		.hidden {
+			opacity: 0!important;
+		}
+		
+		.thunder {
+			position:fixed;
+			top:0px;
+			left:0px;
+			width:100%;
+			height:100%;
+			min-height:100%;
+			z-index:50;
+			background: url('img/thunder.png') center center no-repeat transparent;	
+			background:size:100% 100%;
+			display:none;
+		}
+		
+		#thunder1{
+			background: url('img/thunder1.png') center center no-repeat rgba(255,255,255,0.7);	
+			background:size:100% 100%;			
+		}
+		#thunder2{
+			background: url('img/thunder2.png') center center no-repeat  rgba(255,255,255,0.7);	
+			background:size:100% 100%;			
+		}		
+		
+		#share {
+			position:fixed;
+			top:20px;
+			right:20px;
+			z-index:200;
+		}
+		
+		#share .col {
+			margin:20px;
+			width:100px;
+			text-align:right;
+			overflow:hidden;
+			
+		}
+		
+		footer {
+			position:fixed;
+			bottom:0px;
+			right:0px;
+			width:100%;
+			z-index:200;
+			padding:10px;
+			color:white;
+			text-align:right;
+		}
+		
+		footer a{
+			color:red;
+		}
+		
+		</style>
+		
+		<div id="share" class="row">
+			<div class="col-lg-9">
+				<div class="col col-lg-2">
+					<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fenterin.github.io&amp;width=100&amp;height=21&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;send=false&amp;appId=227169640779122" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:The pixel width of the pluginpx; height:21px;" allowTransparency="true"></iframe>    				  									
+				</div>
+				<div class="col col-lg-2">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://enterin.github.io" data-via="gianbalex" data-lang="en" >Tweet</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				</div>		
+				<div class="col col-lg-2" style="margin-left:13px;">
+					<script src="http://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+					<script type="IN/Share" data-url="http://enterin.github.io" data-counter="right"></script>
+				</div>	
+				<div class="col col-lg-2">
+					<iframe src="http://ghbtns.com/github-btn.html?user=enterin&repo=enterin&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0"></iframe>	
+				</div>	
+			</div>									
+		</div>
+		
+		<div id="thunder1" class="thunder"></div>
+		<div id="thunder2" class="thunder"></div>
+
+		<div id="enterin-wrapper">
+			<div class="enterin-slide slide1"></div>
+			<div class="enterin-slide slide2"></div>
+			<div class="enterin-slide slide3">
+				<div class="text"></div>
+			</div>
+		</div>
+		
+		<div id="enterin-ctrl">
+			<a href="javascript:;" data-enterin="2"></a>
+			<a href="javascript:;" data-enterin="3"></a>
+		</div>
+		
+		<a href="javascript:;" id="play">PLAY NOW</a>
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>');</script>	
+		<script src="../../js/vendor/jquery.enterin.min.js"></script>
+		
+		<audio id="bg-sound" src="assets/bgsound.mp3" preload="auto"></audio>
+		<audio id="thunder-sound1" src="assets/thunder.mp3" preload="auto"></audio>
+		<audio id="thunder-sound2" src="assets/thunder.mp3" preload="auto"></audio>
+		<audio id="rain-sound" src="assets/rain.mp3" preload="auto"></audio>
+		
+		<footer>Made With <a href="http://enterin.github.io">EnterIN | An Inception Plugin For jQuery</a> | © 2013 Gianfilippo Balestriero under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></footer>
+		
+		<script>
+		
+		jQuery("#enterin-wrapper").enterin({
+		   controllers:	'#enterin-ctrl',
+		   maxScale: 150,
+		   effectTime: 2.0,
+		   ease: 'linear',
+		   endCallback:	function(current_index) {
+				if(current_index == "2") {
+					jQuery(".slide3 .text").css("opacity", 1);
+				}
+		   }
+		});
+		
+		jQuery("#play").click(function(){
+			jQuery(this).addClass("hidden");
+			jQuery("a[data-enterin='2']").click();
+			setTimeout(function(){
+				jQuery("a[data-enterin='3']").click();
+				jQuery(".slide2").css("transform", "scale(10)");
+			},2000);
+		});
+		
+		jQuery("#enterin-wrapper, #enterin-ctrl").hide(0);
+		
+		var bgSound 		= document.getElementById("bg-sound");
+		var rainSound 		= document.getElementById("rain-sound");
+		var thunderSound1 	= document.getElementById("thunder-sound1");
+		var thunderSound2 	= document.getElementById("thunder-sound2");
+		
+		bgSound.loop 				= 1;
+		rainSound.loop 				= 1;
+		
+		bgSound.volume				= 0.28;	
+		
+		rainSound.volume			= 0.01;	
+		thunderSound1.volume		= 0.08;	
+		
+		bgSound.play();
+		rainSound.play();
+		
+		setTimeout(function(){
+			jQuery("#enterin-wrapper, #enterin-ctrl")
+			.fadeOut(0)
+			.fadeIn("slow");
+		},1500);
+		
+		setInterval(function(){
+			
+			jQuery("#thunder1").fadeIn(10).fadeOut(20).fadeIn(30).fadeOut(10).fadeIn(30).fadeOut(0);
+			
+			thunderSound1.play();
+			
+			setTimeout(function(){
+				jQuery("#thunder2").fadeIn(10).fadeOut(20).fadeIn(30).fadeOut(10).fadeIn(30).fadeOut(0);
+			},200);
+			
+		},5000);
+		
+		setInterval(function(){
+			jQuery(".slide3 .text").fadeIn(10).fadeOut(20).fadeIn(30).fadeOut(10).fadeIn(1000);
+		},2500);
+		</script>
+		
+	</body>
+</html>
