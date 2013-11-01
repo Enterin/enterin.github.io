@@ -233,14 +233,17 @@ footer {
 	background: url('../img/mac.png') center center no-repeat transparent;
 	background-size: 100%;
 }
+
 #enterin-wrapper .enterin-slide.slide2 {
 	background: url('../img/ipad.png') center center no-repeat transparent;
 	background-size: 100%;
 }
+
 #enterin-wrapper .enterin-slide.slide3 {
 	background: url('../img/iphone.png') center center no-repeat transparent;
 	background-size: 90%;
 }
+
 #enterin-wrapper .enterin-slide.slide4 {
 	background: url('../img/enterin-slide.png') center center no-repeat transparent;
 	background-size: 60%;
@@ -252,6 +255,7 @@ footer {
 	z-index:99999;
 	width:500px;
 }
+
 #enterin-ctrl a{
 	display:block;
 	margin-bottom:20px;
