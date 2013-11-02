@@ -14,39 +14,134 @@
  * limitations under the License.
  * 
  */
+var app = {
 
+	effectTime:60,
 
-var main = {
-	
 	init: function(){
+
+		setTimeout(function(){
+			app.loading(function(){	
+				app.bindBodyTransition();
+				app.bindEnterIN();
+				app.startAnimation();
+			});			
+		},500)
+
+	},
+
+	loading: function(callback){
+		var images = [
+
+			'planets/planet-1.png',
+			'planets/planet-3.png',
+			'planets/planet-4.png',
+			'planets/planet-5.png',
+			'planets/planet-7.png',
+			'planets/planet-8.png',
+			'planets/planet-9.png',
+
+			'img/star-1.png',
+			'img/star-2.png',
+			'img/last-message.png',
+
+		];
+
+		var countImages = images.length;
+
+		var loaded = 0;
+
+		var perc   = Math.ceil(100/countImages);
+
+		for(var i = 0; i< countImages; i++) {
+
+			var img = jQuery("<img>");
+			img.src= images[i];	
+			
+			img.one('load', function() {
+				var nPerc = perc*(i+1);
+				jQuery("#loading span").css("width", perc*(i+1)+"%");
+				if(nPerc>=100) {
+					setTimeout(function(){
+						app.hideLoading();
+						callback();
+					},3000)
+					
+				}
+			}).each(function() {
+				if(this.complete) jQuery(this).load();
+			});
+		}
+
 		
-		this.bindNav();
+
+		return;
+	},
+
+	hideLoading: function(callback) {
+		jQuery("#loading").fadeOut("slow");
+	},
+
+	bindBodyTransition: function() {
+		jQuery("body").css("transition", "all 1s");
+	},
+
+	bindEnterIN: function(){
+		jQuery("#enterin-wrapper").enterin({
+			effectTime: app.effectTime,
+			ease: 'cubic-bezier(.97,.06,.72,.65)'
+		});
+
+	},
+	startAnimation: function(){
+		
+		jQuery("#enterin-wrapper").enterin.goToSlide(15);
+
+		jQuery("body").addClass("universe");
+
+		setTimeout(function(){
+			jQuery(".enterin-slide").addClass("hidden");
+			jQuery(".slide-11").removeClass("hidden");
+			jQuery(".planet").removeClass("hidden");
+			jQuery(".planet").addClass("lunar");
+		},1500);
+
+		app.rotateMessage();
+
+		setTimeout(function(){
+			app.endAnimation();
+		},((app.effectTime+2)*1000));
 		
 	},
-	
-	bindNav: function(){
-		
-		jQuery("[data-topage]").click(function(){
-			
-			jQuery("[data-topage]").parent().removeClass("active")
-			
-			var $this = jQuery(this);
-			var $page = $this.data("topage");
-			
-			var $top  = jQuery("#"+$page).position().top;
-			
-			jQuery("html, body").stop().animate({
-				scrollTop: $top
-			},"slow");
-			
-			$this.parent().addClass("active");
-			
-		});
-		
+
+	endAnimation: function(){
+		jQuery("#enterin-wrapper").fadeOut("slow");
+		jQuery("#end-message").fadeIn("slow");
+	},
+
+	rotateMessage: function(){
+		var lengthMessages = jQuery("#end-message .end").length;
+		for(var i = 1; i <=lengthMessages; i++) {
+			app.rotateH1(i);
+		}
+	},
+
+	rotateH1: function(i){
+		var fff = (((app.effectTime/jQuery("#end-message .end").length)*1030))*i;
+		setTimeout(function(){
+			jQuery("#end-message .end").stop().fadeOut(1400, function(){
+
+				setTimeout(function(){
+					jQuery("#end-message .end").eq(i-1).fadeIn(1000);
+					jQuery(this).delay(2000).fadeOut();
+				},1400);					
+			});			
+		},fff);	
+
 	}
-	
+
 };
 
 jQuery(function(){
-	main.init();
+	app.init();
 });
