@@ -294,7 +294,7 @@ header {
 
 #social {
 	display: table;
-	width:590px;
+	width:510px;
 	position:fixed;
 	top: 20px;
 	right:20px;
@@ -315,7 +315,7 @@ header {
 }
 
 #social .col iframe{
-	width: 90px;
+	width: 100px;
 	height: 20px;
 	overflow: hidden;
 }
