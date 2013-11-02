@@ -294,7 +294,7 @@ header {
 
 #social {
 	display: table;
-	width:530px;
+	width:591px;
 	position:fixed;
 	top: 20px;
 	right:20px;
@@ -307,7 +307,7 @@ header {
 }
 
 #social .col {
-	width: 20px;
+	width: 92px;
 	overflow: hidden;
 	display: table-cell;
 	vertical-align: middle;
@@ -318,6 +318,7 @@ header {
 	width: 103px;
 	height: 20px;
 	overflow: hidden;
+	text-align: center;
 }
 
 footer {
