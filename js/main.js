@@ -58,7 +58,7 @@ var app = {
 			var img = jQuery("<img>");
 			img.src= images[i];	
 			
-			img.one('load', function() {
+			img.load(function() {
 				var nPerc = perc*(i+1);
 				jQuery("#loading span").css("width", perc*(i+1)+"%");
 				if(nPerc>=100) {
