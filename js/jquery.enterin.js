@@ -45,6 +45,8 @@
 
                     enterin.isInit  = true;
 
+                    enterin.to      = 1;
+
                     enterin.ctrl    = false
 
                     enterin.wrapper = jQuery(element);
@@ -68,6 +70,8 @@
                     enterin.bindControllers();
 
                     enterin.bindAnimation();
+
+                    enterin.changeSlide(1);
 
                 },
 
@@ -103,14 +107,22 @@
 
                     var d               = (settings.effectTime/countSlides);
 
-                    enterin.changeSlide(1);
+                    var b               = ["-webkit-","-moz-", "-ms-", "-o-",""];
+
+                    var cssTrans        = {};
+
+                    for(var i in b) {
+                        var css = b[i]+"transform "+settings.effectTime+"s "+settings.ease+", opacity "+settings.effectTime+"s "+settings.ease;
+                        console.log(css)
+                        enterin.wrapper.find(".enterin-slide").css(b[i]+"transition",css);
+                    }
 
                     setTimeout(function(){
                         enterin.wrapper.find(".enterin-slide").css("position",      "absolute");
                         enterin.wrapper.find(".enterin-slide").css("top",           "0px");
                         enterin.wrapper.find(".enterin-slide").css("left",          "0px");
 
-                        enterin.wrapper.find(".enterin-slide").css("transition", "all "+settings.effectTime+"s "+settings.ease);
+                        enterin.wrapper.find(".enterin-slide").css("-web", "all "+settings.effectTime+"s "+settings.ease);
 
                     },10);
 
@@ -143,10 +155,8 @@
 
                 bindAnimation: function(){
 
-                    var countSlides     = enterin.wrapper.find(".enterin-slide").length;
 
                     jQuery(".enterin-slide").unbind('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd');
-                    enterin.wrapper.find(".enterin-slide").css("z-index", null);
 
                     jQuery(".enterin-slide").eq(enterin.to-1).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd', function(){
                         if(enterin.isInit) {
@@ -154,13 +164,35 @@
                             return;
                         }
                         else {
-                            console.log("netro");
-                            enterin.wrapper.find(".enterin-slide").eq(enterin.to-1).css("z-index",countSlides);
                             settings.endCallback(enterin.to-1);                        
                            
                         }
+
                     });
 
+                },
+
+                changeZindex: function(){
+
+                    var countSlides     = enterin.wrapper.find(".enterin-slide").length;
+
+                    setTimeout(function(){
+                        enterin.wrapper.find(".enterin-slide").each(function(i, val){
+                            var a = ((countSlides-i)-1);
+                            var b = (enterin.to-1)
+                            enterin.wrapper.find(".enterin-slide").eq(i).css("z-index", i);
+                            if(a == b) {
+                                enterin.wrapper.find(".enterin-slide").eq(i).css("z-index", countSlides*2);
+                            }
+                        });
+                    }, settings.effectTime*000);
+
+
+                },
+
+                changeActive: function(){
+                    enterin.wrapper.find(".enterin-slide").removeClass("enterin-active");
+                    enterin.wrapper.find(".enterin-slide").eq(enterin.wrapper.find(".enterin-slide").length-enterin.to).addClass("enterin-active");
                 },
 
                 changeSlide: function(to, scaleOverride) {
@@ -192,6 +224,10 @@
                     enterin.to = to;
 
                     enterin.bindAnimation();
+
+                    enterin.changeZindex();
+
+                    enterin.changeActive();
 
                 },
 

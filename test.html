@@ -4,42 +4,87 @@
 	<meta charset="UTF-8">
 	<title>Test</title>
 	<style>
+	h1 {
+		font-size:22px;
+	}
+	body {
+		background: #00022c;
+	}
 	#enterin-wrapper1, #enterin-wrapper2, .enterin-slide, html, body {
 		color:white;
-		background:white;
 		display: inline-block;
 		width: 100%;
 		height: 100%;
 		min-height: 100px;
-		text-align: center;
 		vertical-align: middle;
 		margin:0px;
 		padding:0px;
-	}
-	.slide1{
-		background:url('img/mac.png') center center no-repeat transparent;
-		background-size: 80%;
-	}
-	.slide2{
-		background:url('img/ipad.png') center center no-repeat transparent;
-		background-size: 60%;		
-	}
-	.slide3{
-		background:url('img/iphone.png') center center no-repeat transparent;
-		background-size: 60%;		
-	}
-	.slide4{
-		background:url('img/enterin-slide.png') center center no-repeat transparent;
-		background-size: 30%;
-	}			
-	a {
-		color:black;
+		font-family: Arial;
+		font-size:12px;
 	}
 	#enterin-wrapper2 {
-		position: fixed;
-		top:0px;
+		width:80%;
+		height: 80%;
+		min-height: 80%;
+		right:0px;
 		left:0px;
+		top:0px;
+		bottom: 0px;
+		margin: auto auto;
+		position: fixed!important;
+
 	}
+	.enterin-slide {
+
+		background:transparent;
+		border:1px solid black;
+		width:95%;
+		height:95%;
+		min-height: 95%;
+		background: white;
+
+	}
+	.slide4 {
+		color:black;
+
+	}
+	nav a {
+		color:white;
+	}
+	.table {
+		display: table;
+		width: 100%;
+		height:100%;
+		min-height: 100%;
+	}
+	.table .row {
+		display: table-row;
+		width: 100%;
+		height:100%;
+		min-height: 100%;
+	}	
+	.table .row .cell {
+		display: table-cell;
+		width: 100%;
+		height:100%;
+		min-height: 100%;
+		padding:2%;
+	}		
+	p {
+		line-height: 20px;
+	}
+	article:nth-child(odd) {
+	    margin-left:-5%;
+	}
+	article:nth-child(even) {
+	    margin-left:50%;
+	    background: #E0E0E0;
+	}
+	article.enterin-active {
+	    margin-left:25%!important;
+	    width: 800px!important;
+	    height: 60%!important;
+	}	
 	</style>
 </head>
 <body>
@@ -50,11 +95,91 @@
 	<a href="#" data-enterin="3">SLIDE 3</a>
 	<a href="#" data-enterin="4">SLIDE 4</a>
 </nav>
-<section id="enterin-wrapper2">
-	<article class="enterin-slide slide1">SLIDE 1</article>
-	<article class="enterin-slide slide2">SLIDE 2</article>
-	<article class="enterin-slide slide3">SLIDE 3</article>
-	<article class="enterin-slide slide4">SLIDE 4</article>													
+<section data-enterin="1"  id="enterin-wrapper2">
+	<article class="enterin-slide slide4">
+		<div class="table" style="display:table">
+			<div class="row" style="display:table-row">
+				<div class="cell">
+					<h1>TITOLO 1</h1>
+					<p>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, expedita, voluptatum dolore sequi explicabo vel voluptatibus laboriosam alias aut distinctio sunt officiis minima maxime nostrum voluptas optio error provident sit.</span>
+						<span>Accusamus, quisquam earum vitae veritatis ratione officiis illo numquam voluptatem esse nobis? Provident voluptatibus sapiente doloremque dolores est vitae nostrum hic voluptas modi vero. Magni, quae adipisci dolor ullam eos?</span>
+						<span>Obcaecati, numquam in ipsum iste nam id ratione esse maxime cupiditate ullam est distinctio perspiciatis ipsa illum fugiat quidem dolorem autem aspernatur quam repellat ex officia tenetur error assumenda similique!</span>
+					</p>
+					<ul>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</article>	
+	<article data-enterin="2" class="enterin-slide slide4">
+		<div class="table" style="display:table">
+			<div class="row" style="display:table-row">
+				<div class="cell">
+					<h1>TITOLO 2</h1>
+					<p>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, expedita, voluptatum dolore sequi explicabo vel voluptatibus laboriosam alias aut distinctio sunt officiis minima maxime nostrum voluptas optio error provident sit.</span>
+						<span>Accusamus, quisquam earum vitae veritatis ratione officiis illo numquam voluptatem esse nobis? Provident voluptatibus sapiente doloremque dolores est vitae nostrum hic voluptas modi vero. Magni, quae adipisci dolor ullam eos?</span>
+						<span>Obcaecati, numquam in ipsum iste nam id ratione esse maxime cupiditate ullam est distinctio perspiciatis ipsa illum fugiat quidem dolorem autem aspernatur quam repellat ex officia tenetur error assumenda similique!</span>
+					</p>
+					<ul>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</article>	
+	<article data-enterin="3"  class="enterin-slide slide4">
+		<div class="table" style="display:table">
+			<div class="row" style="display:table-row">
+				<div class="cell">
+					<h1>TITOLO 3</h1>
+					<p>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, expedita, voluptatum dolore sequi explicabo vel voluptatibus laboriosam alias aut distinctio sunt officiis minima maxime nostrum voluptas optio error provident sit.</span>
+						<span>Accusamus, quisquam earum vitae veritatis ratione officiis illo numquam voluptatem esse nobis? Provident voluptatibus sapiente doloremque dolores est vitae nostrum hic voluptas modi vero. Magni, quae adipisci dolor ullam eos?</span>
+						<span>Obcaecati, numquam in ipsum iste nam id ratione esse maxime cupiditate ullam est distinctio perspiciatis ipsa illum fugiat quidem dolorem autem aspernatur quam repellat ex officia tenetur error assumenda similique!</span>
+					</p>
+					<ul>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</article>	
+	<article data-enterin="4"  class="enterin-slide slide4">
+		<div class="table" style="display:table">
+			<div class="row" style="display:table-row">
+				<div class="cell">
+					<h1>TITOLO 4</h1>
+					<p>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, expedita, voluptatum dolore sequi explicabo vel voluptatibus laboriosam alias aut distinctio sunt officiis minima maxime nostrum voluptas optio error provident sit.</span>
+						<span>Accusamus, quisquam earum vitae veritatis ratione officiis illo numquam voluptatem esse nobis? Provident voluptatibus sapiente doloremque dolores est vitae nostrum hic voluptas modi vero. Magni, quae adipisci dolor ullam eos?</span>
+						<span>Obcaecati, numquam in ipsum iste nam id ratione esse maxime cupiditate ullam est distinctio perspiciatis ipsa illum fugiat quidem dolorem autem aspernatur quam repellat ex officia tenetur error assumenda similique!</span>
+					</p>
+					<ul>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</article>																
 </section>
 
 
@@ -64,7 +189,7 @@
 <script>
 
 jQuery("#enterin-wrapper2").enterin({
-	effectTime: 0.1
+	effectTime: 0.4
 });
 
 </script>
