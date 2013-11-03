@@ -321,6 +321,19 @@ header {
 	text-align: center;
 }
 
+#official-links {
+	position: fixed;
+	bottom:20px;
+	left:20px;
+	z-index: 999999;
+}
+
+#official-links a, #official-links i {
+	display: inline-block;
+	font-style: normal;
+	color:white;
+}
+
 footer {
 	position: fixed;
 	bottom: 40px;
