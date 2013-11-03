@@ -61,7 +61,7 @@
                         enterin.ctrl    = false;
                     }
 
-                    enterin.bindMouseWheel();
+                    enterin.bindKeyAndMouseEvents();
 
                     enterin.reorderSlide();
 
@@ -77,28 +77,65 @@
 
                 },
 
-                bindMouseWheel: function(){
-                    var t;
+                bindKeyAndMouseEvents: function(){
+
                     enterin.wrapper.bind("mousewheel", function(event, delta){
-                        clearTimeout(t);
-                        t = setTimeout(function(){
-                            if(delta=="-1") {
-                                enterin.to = enterin.to+1;
-                            }
-                            else {
-                                enterin.to = enterin.to-1;
-                            }  
+                        
+                        if(delta=="-1") {
+                            enterin.to = enterin.to+1;
+                        }
+                        else {
+                            enterin.to = enterin.to-1;
+                        }  
 
-                            if(enterin.to<1) {
-                                enterin.to = enterin.wrapper.find(".enterin-slide").length;
-                            }
-                            else if(enterin.to>enterin.wrapper.find(".enterin-slide").length){
-                                enterin.to = enterin.to>enterin.wrapper.find(".enterin-slide").length;
-                            }                        
+                        enterin.keyFire();
 
-                            enterin.changeSlide(enterin.to);
-                        },200);
                     });
+
+                    jQuery("body").keydown(function (e) {
+                        var keyCode = e.keyCode || e.which,
+                        arrow = {left: 37, up: 38, right: 39, down: 40 };
+
+                        switch (keyCode) {
+                            case arrow.left:
+                                enterin.to = enterin.to-1;
+
+                            break;
+                            case arrow.right:
+                                 enterin.to = enterin.to+1;
+                            break;                            
+                            case arrow.up:
+                                 enterin.to = enterin.to-1;
+                            break;
+
+                            case arrow.down:
+                                 enterin.to = enterin.to+1;
+                            break;
+                        }
+
+                        enterin.keyFire();
+
+                    });                    
+                },
+
+                keyFire: function(){
+                    var t;
+
+                    if(enterin.to<1) {
+                        enterin.to = enterin.wrapper.find(".enterin-slide").length;
+                    }
+                    else if(enterin.to>enterin.wrapper.find(".enterin-slide").length){
+                        enterin.to = enterin.to>enterin.wrapper.find(".enterin-slide").length;
+                    }
+
+                    clearTimeout(t);
+                    
+                    t = setTimeout(function(){
+
+                        enterin.changeSlide(enterin.to);
+
+                    },200);
+
                 },
 
                 reorderSlide: function() {
@@ -140,7 +177,13 @@
                     for(var i in b) {
 
                         var css = b[i]+"transform "+settings.effectTime+"s "+settings.ease+", opacity "+settings.effectTime+"s "+settings.ease+", margin "+settings.effectTime+"s "+settings.ease;
+
+                        
+                        enterin.wrapper.find(".enterin-slide").css(b[i]+"perspective","1000");
+
                         enterin.wrapper.find(".enterin-slide").css(b[i]+"transition",css);
+                        enterin.wrapper.find(".enterin-slide").css(b[i]+"backface-visibility","hidden");
+
 
                     }
 
@@ -148,8 +191,6 @@
                         enterin.wrapper.find(".enterin-slide").css("position",      "absolute");
                         enterin.wrapper.find(".enterin-slide").css("top",           "0px");
                         enterin.wrapper.find(".enterin-slide").css("left",          "0px");
-
-                        enterin.wrapper.find(".enterin-slide").css("-web", "all "+settings.effectTime+"s "+settings.ease);
 
                     },10);
 
