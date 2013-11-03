@@ -55,8 +55,8 @@ var app = {
 
 		for(var i = 0; i< countImages; i++) {
 
-			var img = jQuery("<img>");
-			img.src= images[i];	
+			var img = jQuery('<img/>');
+			img.attr("src", images[i]);
 			
 			img.load(function() {
 				var nPerc = perc*(i+1);
