@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+	<style>
+	#enterin-wrapper1, #enterin-wrapper2, .enterin-slide, html, body {
+		color:white;
+		background:white;
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		min-height: 100px;
+		text-align: center;
+		vertical-align: middle;
+		margin:0px;
+		padding:0px;
+	}
+	.slide1{
+		background:url('img/mac.png') center center no-repeat transparent;
+		background-size: 80%;
+	}
+	.slide2{
+		background:url('img/ipad.png') center center no-repeat transparent;
+		background-size: 60%;		
+	}
+	.slide3{
+		background:url('img/iphone.png') center center no-repeat transparent;
+		background-size: 60%;		
+	}
+	.slide4{
+		background:url('img/enterin-slide.png') center center no-repeat transparent;
+		background-size: 30%;
+	}			
+	a {
+		color:black;
+	}
+	#enterin-wrapper2 {
+		position: fixed;
+		top:0px;
+		left:0px;
+	}
+	</style>
+</head>
+<body>
+<br>
+<nav style="position:absolute; z-index:999">
+	<a href="#" data-enterin="1">SLIDE 1</a>
+	<a href="#" data-enterin="2">SLIDE 2</a>
+	<a href="#" data-enterin="3">SLIDE 3</a>
+	<a href="#" data-enterin="4">SLIDE 4</a>
+</nav>
+<section id="enterin-wrapper2">
+	<article class="enterin-slide slide1">SLIDE 1</article>
+	<article class="enterin-slide slide2">SLIDE 2</article>
+	<article class="enterin-slide slide3">SLIDE 3</article>
+	<article class="enterin-slide slide4">SLIDE 4</article>													
+</section>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="js/jquery.enterin.js"></script>
+
+<script>
+
+jQuery("#enterin-wrapper2").enterin({
+	effectTime: 0.1
+});
+
+</script>
+</body>
+</html>
