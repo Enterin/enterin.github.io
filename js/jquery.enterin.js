@@ -178,11 +178,12 @@
 
                         var css = b[i]+"transform "+settings.effectTime+"s "+settings.ease+", opacity "+settings.effectTime+"s "+settings.ease+", margin "+settings.effectTime+"s "+settings.ease;
 
-                        
-                        enterin.wrapper.find(".enterin-slide").css(b[i]+"perspective","1000");
+                        enterin.wrapper.find(".enterin-slide").css("-webkit-transform","translateZ(0)");
+                        enterin.wrapper.find(".enterin-slide").css("-webkit-backface-visibility","hidden");
+                        enterin.wrapper.find(".enterin-slide").css("-webkit-perspective","1000");
 
                         enterin.wrapper.find(".enterin-slide").css(b[i]+"transition",css);
-                        enterin.wrapper.find(".enterin-slide").css(b[i]+"backface-visibility","hidden");
+                        
 
 
                     }
