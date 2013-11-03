@@ -323,8 +323,8 @@ header {
 
 #official-links {
 	position: fixed;
-	bottom:20px;
-	left:20px;
+	bottom:40px;
+	left:40px;
 	z-index: 999999;
 }
 
