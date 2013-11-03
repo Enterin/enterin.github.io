@@ -53,24 +53,32 @@ var app = {
 
 		var perc   = Math.ceil(100/countImages);
 
+		var isIn   = false;
+
 		for(var i = 0; i< countImages; i++) {
 
-			var img = jQuery('<img/>');
-			img.attr("src", images[i]);
-			
-			img.load(function() {
+			var image = new Image();
+
+			image.onload = function(){
+
 				var nPerc = perc*(i+1);
+
 				jQuery("#loading span").css("width", perc*(i+1)+"%");
-				if(nPerc>=100) {
+
+				if(nPerc>=100 && isIn == false) {
 					setTimeout(function(){
 						app.hideLoading();
 						callback();
-					},3000)
-					
+					},4000);
+
+					isIn = true;
 				}
-			}).each(function() {
-				if(this.complete) jQuery(this).load();
-			});
+			}
+
+			image.src = images[i];
+
+
+
 		}
 
 		
