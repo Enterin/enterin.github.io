@@ -19,7 +19,7 @@
 		vertical-align: middle;
 		margin:0px;
 		padding:0px;
-		font-family: Arial;
+		font-family: Verdana;
 		font-size:12px;
 	}
 	#enterin-wrapper2 {
@@ -39,15 +39,15 @@
 		background:transparent;
 		border:1px solid black;
 		width:95%;
-		height: 60%;
-		min-height: 60%;
+		height: 90%;
+		min-height: 90%;
 		background: white;
 
-		-moz-transition: all 2s, width 0.0s, z-index 0.0s!important;
+		-moz-transition: all 1s, width 0.0s, z-index 0.0s!important;
 		-webkit-transition: all 2s, width 0.0s, z-index 0.0s!important;
-		-ms-transition: all 2s, width 0.0s, z-index 0.0s!important;
-		-o-transition: all 2s, width 0.0s, z-index 0.0s!important;
-		transition: all 2s, width 0.0s, z-index 0.0s!important;
+		-ms-transition: all 1s, width 0.0s, z-index 0.0s!important;
+		-o-transition: all 1s, width 0.0s, z-index 0.0s!important;
+		transition: all 1s, width 0.0s, z-index 0.0s!important;
 
 	}
 	.enterin-slide:hover {
@@ -97,7 +97,10 @@
 	    margin-left:25%!important;
 	    width: 800px!important;
 	    margin: auto auto;
-	}	
+	}
+	ul li {
+		margin:20px 0px;
+	}
 	</style>
 </head>
 <body>
@@ -198,11 +201,12 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="js/jquery.enterin.js"></script>
+<script src="js/vendor/mousewheel/jquery.mousewheel.js"></script>
 
 <script>
 
 jQuery("#enterin-wrapper2").enterin({
-	effectTime: 5.4
+	effectTime: 0.5
 });
 
 </script>

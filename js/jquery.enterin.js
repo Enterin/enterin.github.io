@@ -61,6 +61,8 @@
                         enterin.ctrl    = false;
                     }
 
+                    enterin.bindMouseWheel();
+
                     enterin.reorderSlide();
 
                     enterin.setWrapperStyle();
@@ -73,6 +75,30 @@
 
                     enterin.changeSlide(1);
 
+                },
+
+                bindMouseWheel: function(){
+                    var t;
+                    enterin.wrapper.bind("mousewheel", function(event, delta){
+                        clearTimeout(t);
+                        t = setTimeout(function(){
+                            if(delta=="-1") {
+                                enterin.to = enterin.to+1;
+                            }
+                            else {
+                                enterin.to = enterin.to-1;
+                            }  
+
+                            if(enterin.to<1) {
+                                enterin.to = enterin.wrapper.find(".enterin-slide").length;
+                            }
+                            else if(enterin.to>enterin.wrapper.find(".enterin-slide").length){
+                                enterin.to = enterin.to>enterin.wrapper.find(".enterin-slide").length;
+                            }                        
+
+                            enterin.changeSlide(enterin.to);
+                        },200);
+                    });
                 },
 
                 reorderSlide: function() {
