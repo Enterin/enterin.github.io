@@ -39,10 +39,23 @@
 		background:transparent;
 		border:1px solid black;
 		width:95%;
-		height:95%;
-		min-height: 95%;
+		height: 60%;
+		min-height: 60%;
 		background: white;
 
+		-moz-transition: all 2s, width 0.0s, z-index 0.0s!important;
+		-webkit-transition: all 2s, width 0.0s, z-index 0.0s!important;
+		-ms-transition: all 2s, width 0.0s, z-index 0.0s!important;
+		-o-transition: all 2s, width 0.0s, z-index 0.0s!important;
+		transition: all 2s, width 0.0s, z-index 0.0s!important;
+
+	}
+	.enterin-slide:hover {
+		-webkit-transform: scale(1.6) 0.5s linear!important;
+		-moz-transform: scale(1.6) 0.5s linear!important;
+		-ms-transform: scale(1.6) 0.5s linear!important;
+		-o-transform: scale(1.6) 0.5s linear!important;
+		transform: scale(1.6) 0.5s linear!important;
 	}
 	.slide4 {
 		color:black;
@@ -83,7 +96,7 @@
 	article.enterin-active {
 	    margin-left:25%!important;
 	    width: 800px!important;
-	    height: 60%!important;
+	    margin: auto auto;
 	}	
 	</style>
 </head>
@@ -95,8 +108,8 @@
 	<a href="#" data-enterin="3">SLIDE 3</a>
 	<a href="#" data-enterin="4">SLIDE 4</a>
 </nav>
-<section data-enterin="1"  id="enterin-wrapper2">
-	<article class="enterin-slide slide4">
+<section id="enterin-wrapper2">
+	<article data-enterin="1"  class="enterin-slide slide4">
 		<div class="table" style="display:table">
 			<div class="row" style="display:table-row">
 				<div class="cell">
@@ -189,7 +202,7 @@
 <script>
 
 jQuery("#enterin-wrapper2").enterin({
-	effectTime: 0.4
+	effectTime: 5.4
 });
 
 </script>

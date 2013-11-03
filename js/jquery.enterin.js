@@ -112,9 +112,10 @@
                     var cssTrans        = {};
 
                     for(var i in b) {
-                        var css = b[i]+"transform "+settings.effectTime+"s "+settings.ease+", opacity "+settings.effectTime+"s "+settings.ease;
-                        console.log(css)
+
+                        var css = b[i]+"transform "+settings.effectTime+"s "+settings.ease+", opacity "+settings.effectTime+"s "+settings.ease+", margin "+settings.effectTime+"s "+settings.ease;
                         enterin.wrapper.find(".enterin-slide").css(b[i]+"transition",css);
+
                     }
 
                     setTimeout(function(){
@@ -210,13 +211,17 @@
 
                         var o = s;
 
+                        var v = "visible";
+
                         if(o>1){
                             o = 0;
+                            v = "hidden"
                         }
 
                         jQuery(this).css({
                             transform: 'scale('+s+')',
-                            opacity: o
+                            opacity: o,
+                            visibility: v
                         });
                    
                     });
