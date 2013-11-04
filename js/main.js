@@ -1,5 +1,8 @@
 /*
- * Copyright 2013 Gianfilippo Balestriero
+ *
+ * EnterIN
+ *
+ * Copyright 2013 Gianfilippo Balestriero < enterin.github@gmail.com >
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -95,15 +98,12 @@ var app = {
 	},
 
 	bindEnterIN: function(){
-		jQuery("#enterin-wrapper").enterin({
-			effectTime: app.effectTime,
-			ease: 'cubic-bezier(.97,.06,.72,.65)'
-		});
+		$.EnterIN();
 
 	},
 	startAnimation: function(){
 		
-		jQuery("#enterin-wrapper").enterin.goToSlide(15);
+		jQuery.EnterIN.goToSlide(15);
 
 		jQuery("body").addClass("universe");
 

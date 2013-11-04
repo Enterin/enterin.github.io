@@ -9,151 +9,35 @@
 	}
 	body {
 		background: #00022c;
-	}
-	#enterin-wrapper1, #enterin-wrapper2, .enterin-slide, html, body {
-		color:white;
-		display: inline-block;
-		width: 100%;
-		height: 100%;
-		min-height: 100px;
-		vertical-align: middle;
-		margin:0px;
-		padding:0px;
-		font-family: Verdana;
-		font-size:12px;
-	}
-	#enterin-wrapper2 {
-		width:100%;
-		height: 90%;
-		min-height: 90%;
-		right:0px;
-		left:0px;
-		top:0px;
-		bottom: 0px;
-		margin: auto auto;
-		position: fixed!important;
-
-	}
-	.enterin-slide {
-
-		background:transparent;
-		border:1px solid black;
-		width:50%;
-		height: 100%;
-		min-height: 100%;
 		background: white;
-
-		-moz-transition: all 1s, width 0.0s, z-index 0.0s!important;
-		-webkit-transition: all 0.5s, width 0.0s, z-index 0.0s!important;
-		-ms-transition: all 0.5s, width 0.0s, z-index 0.0s!important;
-		-o-transition: all 0.5s, width 0.0s, z-index 0.0s!important;
-		transition: all 0.5s, width 0.0s, z-index 0.0s!important;
-
 	}
-	.enterin-slide:mouseenter {
-		-webkit-transform: scale(1.6) 0.5s linear!important;
-		-moz-transform: scale(1.6) 0.5s linear!important;
-		-ms-transform: scale(1.6) 0.5s linear!important;
-		-o-transform: scale(1.6) 0.5s linear!important;
-		transform: scale(1.6) 0.5s linear!important;
+	.slide1{
+		background:url('http://www.magliarossonera.it/stagincorso/1011/raduno/leggo1.jpg') center center no-repeat transparent;
+		background-size:100% 100%;
+		color:white!important;
 	}
-	.slide4 {
-		color:black;
-
-	}
-	nav a {
-		color:white;
-	}
-	.table {
-		display: table;
-		width: 100%;
-		height:100%;
-		min-height: 100%;
-	}
-	.table .row {
-		display: table-row;
-		width: 100%;
-		height:100%;
-		min-height: 100%;
-	}	
-	.table .row .cell {
-		display: table-cell;
-		width: 100%;
-		height:100%;
-		min-height: 100%;
-		padding:2%;
-	}		
-	p {
-		line-height: 20px;
-	}
-	article:nth-child(odd) {
-	    margin-left:-5%;
-	}
-	article:nth-child(even) {
-	    margin-left:50%;
-	}
-	article.enterin-active {
-	    margin-left:25%!important;
-	    width: 800px!important;
-	    margin: auto auto;
-	}
-	ul li {
-		margin:20px 0px;
+	.slide2{
+		background:url('http://www.cinemaimmagina.it/stampa/rassegna_ferlito/Corriere_della_Sera_25_apri.jpg') center center no-repeat transparent;
+		background-size:100% 100%;
+		color:white!important;
 	}
 	</style>
 </head>
 <body>
 <br>
 <nav style="position:absolute; z-index:999">
-	<a href="#" data-enterin="1">SLIDE 1</a>
-	<a href="#" data-enterin="2">SLIDE 2</a>
-	<a href="#" data-enterin="3">SLIDE 3</a>
-	<a href="#" data-enterin="4">SLIDE 4</a>
+	<a href="#" data-enterin-to="1">SLIDE 1</a>
+	<a href="#" data-enterin-to="2">SLIDE 2</a>
+	<a href="#" data-enterin-to="3">SLIDE 3</a>
+	<a href="#" data-enterin-to="4">SLIDE 4</a>
 </nav>
-<section id="enterin-wrapper2">
-	<article data-enterin="1"  class="enterin-slide slide4">
-		<div class="table" style="display:table">
-			<div class="row" style="display:table-row">
-				<div class="cell">
-					<h1>TITOLO 1</h1>
-					<p>
-						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, expedita, voluptatum dolore sequi explicabo vel voluptatibus laboriosam alias aut distinctio sunt officiis minima maxime nostrum voluptas optio error provident sit.</span>
-						<span>Accusamus, quisquam earum vitae veritatis ratione officiis illo numquam voluptatem esse nobis? Provident voluptatibus sapiente doloremque dolores est vitae nostrum hic voluptas modi vero. Magni, quae adipisci dolor ullam eos?</span>
-						<span>Obcaecati, numquam in ipsum iste nam id ratione esse maxime cupiditate ullam est distinctio perspiciatis ipsa illum fugiat quidem dolorem autem aspernatur quam repellat ex officia tenetur error assumenda similique!</span>
-					</p>
-					<ul>
-						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
-						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
-						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
-						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
-						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
+<section data-enterin="true" data-enterin-type="blog">
+	<article data-enterin-to="1"  class="enterin-slide slide1">
 	</article>	
-	<article data-enterin="2" class="enterin-slide slide4">
-		<div class="table" style="display:table">
-			<div class="row" style="display:table-row">
-				<div class="cell">
-					<h1>TITOLO 2</h1>
-					<p>
-						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, expedita, voluptatum dolore sequi explicabo vel voluptatibus laboriosam alias aut distinctio sunt officiis minima maxime nostrum voluptas optio error provident sit.</span>
-						<span>Accusamus, quisquam earum vitae veritatis ratione officiis illo numquam voluptatem esse nobis? Provident voluptatibus sapiente doloremque dolores est vitae nostrum hic voluptas modi vero. Magni, quae adipisci dolor ullam eos?</span>
-						<span>Obcaecati, numquam in ipsum iste nam id ratione esse maxime cupiditate ullam est distinctio perspiciatis ipsa illum fugiat quidem dolorem autem aspernatur quam repellat ex officia tenetur error assumenda similique!</span>
-					</p>
-					<ul>
-						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
-						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
-						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
-						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
-						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
+	<article data-enterin-to="2" class="enterin-slide slide2">
+
 	</article>	
-	<article data-enterin="3"  class="enterin-slide slide4">
+	<article data-enterin-to="3"  class="enterin-slide slide4">
 		<div class="table" style="display:table">
 			<div class="row" style="display:table-row">
 				<div class="cell">
@@ -162,6 +46,26 @@
 						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, expedita, voluptatum dolore sequi explicabo vel voluptatibus laboriosam alias aut distinctio sunt officiis minima maxime nostrum voluptas optio error provident sit.</span>
 						<span>Accusamus, quisquam earum vitae veritatis ratione officiis illo numquam voluptatem esse nobis? Provident voluptatibus sapiente doloremque dolores est vitae nostrum hic voluptas modi vero. Magni, quae adipisci dolor ullam eos?</span>
 						<span>Obcaecati, numquam in ipsum iste nam id ratione esse maxime cupiditate ullam est distinctio perspiciatis ipsa illum fugiat quidem dolorem autem aspernatur quam repellat ex officia tenetur error assumenda similique!</span>
+					</p>					<p>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, expedita, voluptatum dolore sequi explicabo vel voluptatibus laboriosam alias aut distinctio sunt officiis minima maxime nostrum voluptas optio error provident sit.</span>
+						<span>Accusamus, quisquam earum vitae veritatis ratione officiis illo numquam voluptatem esse nobis? Provident voluptatibus sapiente doloremque dolores est vitae nostrum hic voluptas modi vero. Magni, quae adipisci dolor ullam eos?</span>
+						<span>Obcaecati, numquam in ipsum iste nam id ratione esse maxime cupiditate ullam est distinctio perspiciatis ipsa illum fugiat quidem dolorem autem aspernatur quam repellat ex officia tenetur error assumenda similique!</span>
+					</p>					<p>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, expedita, voluptatum dolore sequi explicabo vel voluptatibus laboriosam alias aut distinctio sunt officiis minima maxime nostrum voluptas optio error provident sit.</span>
+						<span>Accusamus, quisquam earum vitae veritatis ratione officiis illo numquam voluptatem esse nobis? Provident voluptatibus sapiente doloremque dolores est vitae nostrum hic voluptas modi vero. Magni, quae adipisci dolor ullam eos?</span>
+						<span>Obcaecati, numquam in ipsum iste nam id ratione esse maxime cupiditate ullam est distinctio perspiciatis ipsa illum fugiat quidem dolorem autem aspernatur quam repellat ex officia tenetur error assumenda similique!</span>
+					</p>					<p>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, expedita, voluptatum dolore sequi explicabo vel voluptatibus laboriosam alias aut distinctio sunt officiis minima maxime nostrum voluptas optio error provident sit.</span>
+						<span>Accusamus, quisquam earum vitae veritatis ratione officiis illo numquam voluptatem esse nobis? Provident voluptatibus sapiente doloremque dolores est vitae nostrum hic voluptas modi vero. Magni, quae adipisci dolor ullam eos?</span>
+						<span>Obcaecati, numquam in ipsum iste nam id ratione esse maxime cupiditate ullam est distinctio perspiciatis ipsa illum fugiat quidem dolorem autem aspernatur quam repellat ex officia tenetur error assumenda similique!</span>
+					</p>					<p>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, expedita, voluptatum dolore sequi explicabo vel voluptatibus laboriosam alias aut distinctio sunt officiis minima maxime nostrum voluptas optio error provident sit.</span>
+						<span>Accusamus, quisquam earum vitae veritatis ratione officiis illo numquam voluptatem esse nobis? Provident voluptatibus sapiente doloremque dolores est vitae nostrum hic voluptas modi vero. Magni, quae adipisci dolor ullam eos?</span>
+						<span>Obcaecati, numquam in ipsum iste nam id ratione esse maxime cupiditate ullam est distinctio perspiciatis ipsa illum fugiat quidem dolorem autem aspernatur quam repellat ex officia tenetur error assumenda similique!</span>
+					</p>					<p>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, expedita, voluptatum dolore sequi explicabo vel voluptatibus laboriosam alias aut distinctio sunt officiis minima maxime nostrum voluptas optio error provident sit.</span>
+						<span>Accusamus, quisquam earum vitae veritatis ratione officiis illo numquam voluptatem esse nobis? Provident voluptatibus sapiente doloremque dolores est vitae nostrum hic voluptas modi vero. Magni, quae adipisci dolor ullam eos?</span>
+						<span>Obcaecati, numquam in ipsum iste nam id ratione esse maxime cupiditate ullam est distinctio perspiciatis ipsa illum fugiat quidem dolorem autem aspernatur quam repellat ex officia tenetur error assumenda similique!</span>
 					</p>
 					<ul>
 						<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, porro, ipsa, eum quisquam deleniti corporis harum nesciunt molestias natus animi iure culpa doloribus officia explicabo ipsam sunt soluta temporibus atque!</a></li>
@@ -174,7 +78,7 @@
 			</div>
 		</div>
 	</article>	
-	<article data-enterin="4"  class="enterin-slide slide4">
+	<article data-enterin-to="4"  class="enterin-slide slide4">
 		<div class="table" style="display:table">
 			<div class="row" style="display:table-row">
 				<div class="cell">
@@ -199,14 +103,19 @@
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script src="js/jquery.enterin.js"></script>
+
 <script src="js/vendor/mousewheel/jquery.mousewheel.js"></script>
+
+<link  rel="stylesheet/less" type="text/css" href="js/vendor/enterin/style.enterin.css">
+<script src="js/vendor/less/less.js"></script>
+<script src="js/vendor/enterin/enterin.js"></script>
 
 <script>
 
-jQuery("#enterin-wrapper2").enterin({
-	effectTime: 0.1
-});
+jQuery(function(){
+	$.EnterIN();
+})
+
 
 </script>
 </body>
