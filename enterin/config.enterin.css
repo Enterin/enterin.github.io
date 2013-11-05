@@ -26,7 +26,7 @@
 *
 */
 
-@enterin-effect-speed: 		0.4s;
+@enterin-effect-speed: 		1s;
 
 @enterin-effect-ease: 		ease-in-out;
 
@@ -93,5 +93,26 @@
 
 }
 
+.enterin-blog-slide-container-css {
 
-// now you can write your css here!
+	// css code here
+
+}
+
+.enterin-blog-slide-title-css {
+
+	// css code here
+
+}
+
+.enterin-blog-slide-subtitle-css {
+
+	// css code here
+
+}
+
+.enterin-blog-slide-text-css {
+
+	// css code here
+
+}
