@@ -1,7 +1,5 @@
-[![EnterIN](http://enterin.github.io/img/b-enterin.jpg)](http://enterin.github.io)
+# EnterIN JS going to become a Frontend Framework
 
-## See the official repository:
+## See more at:
 
-### http://github.com/Enterin/enterin
-		
-© 2013 Gianfilippo Balestriero under [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+(http://enterin.github.io)http://enterin.github.io
