@@ -1,6 +1,6 @@
-# EnterIN JS going to become a Frontend Framework
+### EnterIN JS going to become a Frontend Framework
 
-## See more at:
+### See more at:
 
 http://enterin.github.io
 
