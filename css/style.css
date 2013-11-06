@@ -1,6 +1,6 @@
 /*
 * 
-* EnterIN JS | The new Front(ier)end of web development
+* EnterIN JS | The new frontier of web development
 * Copyright (c) 2013 Gianfilippo Balestriero <enterin.github@gmail.com>
 * 
 * This program is free software: you can redistribute it and/or modify
