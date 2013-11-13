@@ -30,7 +30,7 @@ var main = {
 		html.push('<input type="hidden" name="lc" value="US">');
 		html.push('<input type="hidden" name="item_name" value="Donation for Contribute to the EnterIN Framework Project">');
 		html.push('<input type="hidden" name="item_number" value="enterin_pp">');
-		html.push('<input type="text" name="amount" value="25.00"><span class="s">$</span>');
+		html.push('<input type="text" name="amount" value="5.00"><span class="s">$</span>');
 		html.push('<input type="hidden" name="currency_code" value="USD">');
 		html.push('<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHosted">');
 		html.push('<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">');
